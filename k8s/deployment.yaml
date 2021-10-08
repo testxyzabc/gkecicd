@@ -5,17 +5,16 @@ metadata:
 spec:
   selector:
     matchLabels:
-      dep: first
+      app: demo
   replicas: 5
   template:
     metadata:
       name: deppod
       labels:
-        dep: first
+        app: demo
     spec:
       containers:
       - name: firstone
-        image: tutum/apache-php
+        image: gcr.io/deft-clarity-328018/myapp:v2
         ports:
         - containerPort: 80
-
